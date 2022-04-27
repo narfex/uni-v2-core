@@ -1,4 +1,5 @@
 require("@nomiclabs/hardhat-waffle");
+require("@nomiclabs/hardhat-etherscan");
 const accounts = require('../accounts');
 
 const networks = {
@@ -15,5 +16,8 @@ const networks = {
 
 module.exports = {
   solidity: "0.5.16",
-  networks: networks
+  networks: networks,
+  etherscan: {
+      apiKey: accounts.bscscan
+  }
 };
